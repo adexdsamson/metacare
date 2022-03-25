@@ -30,6 +30,6 @@ export interface HeaderTypes {
 
 }
 
-export interface SearchBarType extends InputHTMLAttributes<HTMLInputElement> {
+export interface SearchBarType extends InputHTMLAttributes<HTMLInputElement> { }
 
-}
+export interface ActionPanelTypes {} 

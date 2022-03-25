@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { LayoutTypes, ListItemTypes } from './types';
-import { Sidebar } from './components';
-import { ActivityIcon, AnalyticIcon, CheckMarkIcon, ScheduleIcon, UsersIcon } from '../../assets';
-
+import { LayoutTypes, ListItemTypes } from "./types";
+import { Sidebar, Header } from "./components";
+import {
+  ActivityIcon,
+  AnalyticIcon,
+  CheckMarkIcon,
+  ScheduleIcon,
+  UsersIcon,
+} from "../../assets";
 
 export const Layout = (props: LayoutTypes): JSX.Element => {
-  const [showSubLinks, setShowSubLinks] = useState<boolean>(true)
+  const [showSubLinks, setShowSubLinks] = useState<boolean>(true);
 
   const sidebarData: ListItemTypes[] = [
     {
@@ -36,7 +41,7 @@ export const Layout = (props: LayoutTypes): JSX.Element => {
       subLinks: [
         {
           title: "Teams",
-          active: true
+          active: true,
         },
         {
           title: "Knowledge Base",
@@ -57,9 +62,11 @@ export const Layout = (props: LayoutTypes): JSX.Element => {
         <Sidebar {...{ navbarData: sidebarData }} />
       </div>
       <div className="flex-1 bg-white w-cal-288">
-        <div className="border-b"></div>
+        <div className="border-b h-[78px]">
+          <Header />
+        </div>
         <div className="px-10 pt-5">{props.children}</div>
       </div>
     </div>
   );
-}
+};
