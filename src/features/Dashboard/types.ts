@@ -46,6 +46,6 @@ export interface AnalyticsDataTypes {
   priorityLabel: string;
   priorityColor: colorOptions;
   setStartDate: (date: Date | null) => void;
-  data: { name: string; uv: number }[];
+  data: any;
   timeStamps: { desc: string, time: string }[];
 }

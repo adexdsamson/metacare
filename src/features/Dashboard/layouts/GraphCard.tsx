@@ -19,7 +19,7 @@ export const GraphCard = (props: GraphCardTypes): JSX.Element => {
 
 export const GraphCardHeader = (props: GraphCardHeaderTypes): JSX.Element => {
   return (
-    <div className="lg:flex justify-between items-center w-full my-4 relative z-20">
+    <div className="lg:flex justify-between items-center w-full my-4 ">
       <div className="flex mb-3 justify-between lg:justify-start">
         <Typography
           {...{

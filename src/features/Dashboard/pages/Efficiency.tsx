@@ -11,65 +11,14 @@ import { GraphCard, GraphCardHeader } from "../layouts";
 import { TimeStamp } from "../components";
 import { useState } from "react";
 import { AnalyticsDataTypes } from "../types";
-import { EChartsOption } from "echarts";
+import { option1, option2, option3, option4 } from '../graphData';
 
 export const Efficiency = (): JSX.Element => {
   const [startDate, setStartDate] = useState<Date | null>(null);
 
-  const option: EChartsOption = {
-    xAxis: {
-      type: "category",
-      data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-    },
-    yAxis: {
-      type: "value",
-    },
-    series: [
-      {
-        data: [12, 17, 1, 47, 17, 1, 41, 32],
-        type: "line",
-      },
-    ],
-  };
-
-  const data = [
-    {
-      name: "Jan",
-      uv: 13,
-    },
-    {
-      name: "Feb",
-      uv: 19,
-    },
-    {
-      name: "Mar",
-      uv: 48,
-    },
-    {
-      name: "Apr",
-      uv: 48,
-    },
-    {
-      name: "May",
-      uv: 10,
-    },
-    {
-      name: "Jun",
-      uv: 18,
-    },
-    {
-      name: "Jul",
-      uv: 21,
-    },
-    {
-      name: "Aug",
-      uv: 33,
-    },
-  ];
-
   const analyticData: AnalyticsDataTypes[] = [
     {
-      data,
+      data: option1,
       timeStamps: [
         { desc: "Average Response Time", time: "30 Mins" },
         { desc: "Response Time", time: "1 Hour 30 Mins" },
@@ -83,7 +32,7 @@ export const Efficiency = (): JSX.Element => {
       startDate,
     },
     {
-      data,
+      data: option2,
       timeStamps: [
         { desc: "Average Replies", time: "30 Mins" },
         { desc: "Response Time", time: "1 Hour 30 Mins" },
@@ -97,7 +46,7 @@ export const Efficiency = (): JSX.Element => {
       startDate,
     },
     {
-      data,
+      data: option3,
       timeStamps: [
         { desc: "Average Resolution Rate", time: "30 Mins" },
         { desc: "Response Time", time: "1 Hour 30 Mins" },
@@ -111,7 +60,7 @@ export const Efficiency = (): JSX.Element => {
       startDate,
     },
     {
-      data,
+      data: option4,
       timeStamps: [
         { desc: "Average Contact Rate", time: "30 Mins" },
         { desc: "Response Time", time: "1 Hour 30 Mins" },
@@ -194,14 +143,9 @@ export const Efficiency = (): JSX.Element => {
 
                   <ReactECharts
                     {...{
-                      option,
+                      option: item.data,
                       style: {
-                        height: "100%",
-                        position: "absolute",
-                        zIndex: "1",
-                        top: 20,
-                        left: -20,
-                        right: -10,
+                        height: "70%",
                       },
                     }}
                   />
