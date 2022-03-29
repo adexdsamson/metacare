@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { DashboardTypes } from "./types";
 import { SubHeader } from "./layouts";
 import { TabType } from "../../common/Tabs/types";

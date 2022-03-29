@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { LayoutTypes, ListItemTypes } from "./types";
 import { Sidebar, Header } from "./components";
 import {

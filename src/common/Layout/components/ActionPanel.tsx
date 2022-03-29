@@ -1,4 +1,3 @@
-import React from "react";
 import { ActionPanelTypes, BadgeTyprs } from "../types";
 import { BellsIcon } from "../../../assets";
 import { ChevronDownIcon } from "@heroicons/react/solid";

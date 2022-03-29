@@ -10,15 +10,6 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import { GraphCard, GraphCardHeader } from "../layouts";
 import { TimeStamp } from "../components";
 import { useState } from "react";
-import {
-  CartesianGrid,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 import { AnalyticsDataTypes } from "../types";
 import { EChartsOption } from "echarts";
 

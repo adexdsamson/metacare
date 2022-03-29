@@ -2,7 +2,6 @@ import {
   DetailedHTMLProps,
   InputHTMLAttributes,
   SelectHTMLAttributes,
-  SyntheticEvent,
 } from "react";
 import { ReactDatePickerProps } from "react-datepicker";
 
