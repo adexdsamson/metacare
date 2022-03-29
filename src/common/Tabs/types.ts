@@ -1,6 +1,6 @@
 
 export interface TabType {
-  id: string,
+  id: number,
   title: string,
   onClick: (value: any) => void,
   active: boolean

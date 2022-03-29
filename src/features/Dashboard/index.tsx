@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { DashboardTypes } from './types';
-import { SubHeader } from './layouts';
+import { DashboardTypes } from "./types";
+import { SubHeader } from "./layouts";
 import { TabType } from "../../common/Tabs/types";
-import { Efficiency, Backlog, CustomerSatisfactory, Volume } from './pages';
-
+import { Efficiency, Backlog, CustomerSatisfactory, Volume } from "./pages";
 
 export const Dashboard = (props: DashboardTypes): JSX.Element => {
   const [activeTab, setActiveTab] = useState<number>(1);
@@ -12,30 +11,28 @@ export const Dashboard = (props: DashboardTypes): JSX.Element => {
     {
       id: 1,
       title: "Efficiency",
-      active: activeTab?.title === "Efficiency",
+      active: activeTab === 1,
       onClick: (item) => setActiveTab(item),
     },
     {
       id: 2,
       title: "Volume",
-      active: activeTab?.title === "Volume",
+      active: activeTab === 2,
       onClick: (item) => setActiveTab(item),
     },
     {
       id: 3,
       title: "Customer Satisfaction",
-      active: activeTab?.title === "Customer Satisfaction",
+      active: activeTab === 3,
       onClick: (item) => setActiveTab(item),
     },
     {
       id: 4,
       title: "Backlog",
-      active: activeTab?.title === "Backlog",
+      active: activeTab === 4,
       onClick: (item) => setActiveTab(item),
     },
   ];
-
-
 
   return (
     <>
@@ -46,4 +43,4 @@ export const Dashboard = (props: DashboardTypes): JSX.Element => {
       {activeTab === tabs[3].id && <Backlog />}
     </>
   );
-}
+};

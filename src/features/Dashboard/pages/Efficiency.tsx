@@ -209,7 +209,8 @@ export const Efficiency = (): JSX.Element => {
                         position: "absolute",
                         zIndex: "1",
                         top: 20,
-                        left: -20
+                        left: -20,
+                        right: -10,
                       },
                     }}
                   />
