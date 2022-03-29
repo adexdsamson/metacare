@@ -11,7 +11,7 @@ export const UserBadge = (props: UserBadgeTypes): JSX.Element => {
           {...{
             variant: "h6",
             color: "deep-default",
-            family: "gelion",
+            family: "gelion-regular",
             size: "caption",
           }}
         >
@@ -21,7 +21,7 @@ export const UserBadge = (props: UserBadgeTypes): JSX.Element => {
           {...{
             variant: "p",
             color: "default",
-            family: "gelion",
+            family: "gelion-regular",
             lineHeight: "20",
             size: "subcaption",
           }}

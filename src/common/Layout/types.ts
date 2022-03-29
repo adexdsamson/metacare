@@ -1,7 +1,7 @@
 import { HTMLInputTypeAttribute, InputHTMLAttributes } from "react";
 
 export interface LayoutTypes {
-  children: JSX.Element | null
+  children: JSX.Element | null;
 }
 
 export interface SidebarTypes {
@@ -9,27 +9,33 @@ export interface SidebarTypes {
 }
 
 export interface UserBadgeTypes {
-  name: string,
-  email: string
+  name: string;
+  email: string;
 }
 
 interface subLink {
-  title: string,
-  active?: boolean
+  title: string;
+  active?: boolean;
 }
 
 export interface ListItemTypes {
   icon: string;
   title: string;
-  active?: boolean,
-  onClick?: () => void,
+  active?: boolean;
+  onClick?: () => void;
   subLinks?: subLink[];
 }
 
 export interface HeaderTypes {
-
+  onClick: () => void;
 }
 
-export interface SearchBarType extends InputHTMLAttributes<HTMLInputElement> { }
+export interface SearchBarType extends InputHTMLAttributes<HTMLInputElement> {}
 
-export interface ActionPanelTypes {} 
+export interface ActionPanelTypes {
+  show?: boolean;
+}
+
+export interface BadgeTyprs {
+  number: string;
+}

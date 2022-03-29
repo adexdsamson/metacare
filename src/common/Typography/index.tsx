@@ -19,15 +19,20 @@ const colorMapping = {
   tertiary: "text-tertiary",
   active: "text-active",
   default: "text-default",
-  'deep-default': 'text-deep-default'
+  'deep-default': 'text-deep-default',
+  white: 'text-white'
 };
 
 const fontFamilyMapping = {
-  gelion: "font-gelion",
+  "gelion-regular": "font-gelion-regular",
+  "gelion-medium": "font-gelion-medium",
+  "gelion-semibold": "font-gelion-semibold",
+  "gelion-bold": "font-gelion-bold",
   inter: "font-inter",
 };
 
 const lineHeightMapping = {
+  38: "leading-38",
   29: "leading-29",
   24: "leading-24",
   22: "leading-22",
@@ -58,7 +63,7 @@ export const Typography = ({
   const colors = color ? colorMapping[color] : colorMapping["default"];
   const fontFamily = family
     ? fontFamilyMapping[family]
-    : fontFamilyMapping["gelion"];
+    : fontFamilyMapping["gelion-regular"];
   const lineHeights = lineHeight
     ? lineHeightMapping[lineHeight]
     : lineHeightMapping["22"];

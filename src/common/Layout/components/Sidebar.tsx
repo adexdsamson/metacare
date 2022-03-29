@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography } from "../../Typography";
 import { SidebarTypes, ListItemTypes } from "../types";
 import { UserBadge } from "./UserBadge";
@@ -6,7 +5,7 @@ import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/solid";
 
 const ListItem = (props: ListItemTypes): JSX.Element => {
   return (
-    <li onClick={props.onClick} className="w-full py-4">
+    <li onClick={props.onClick} className="w-full py-4 cursor-pointer">
       <div className="flex items-center gap-x-4">
         <div className="w-[24px] h-[24px] grid place-items-center">
           <img src={props.icon} alt="" />
@@ -17,7 +16,7 @@ const ListItem = (props: ListItemTypes): JSX.Element => {
               variant: "p",
               size: "subbody",
               lineHeight: "24",
-              family: "gelion",
+              family: "gelion-regular",
               color: props.active ? "active" : "default",
             }}
           >
@@ -40,9 +39,9 @@ const ListItem = (props: ListItemTypes): JSX.Element => {
               color: item.active ? "deep-default" : "default",
               size: "subbody",
               lineHeight: "24",
-              family: "gelion",
+              family: "gelion-regular",
               classNames: item.active
-                ? "before:border-l before:border-[#ECEBF5] before:pl-5 mt-2"
+                ? "before:border-l before:border-[#ECEBF5] before:pl-5 mt-2 before:h-14"
                 : "before:pl-6 mt-3",
             }}
           >
@@ -55,6 +54,7 @@ const ListItem = (props: ListItemTypes): JSX.Element => {
 };
 
 export const Sidebar = (props: SidebarTypes) => {
+
   return (
     <aside className="w-full pt-5 px-6 h-full">
       <UserBadge {...{ name: "Metacare", email: "adeyinka@metacare.app" }} />
